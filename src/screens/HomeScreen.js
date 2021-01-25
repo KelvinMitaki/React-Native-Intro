@@ -2,12 +2,21 @@ import React from "react";
 import { Text, StyleSheet, View, Button } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-const HomeScreen = props => {
+const HomeScreen = ({ navigation }) => {
   return (
     <View>
       <Text style={styles.text}>Hi there</Text>
-      <TouchableOpacity onPress={() => props.navigation.navigate("Components")}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate("Components")}
+      >
         <Text>go to components</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate("List")}
+      >
+        <Text>go to list</Text>
       </TouchableOpacity>
     </View>
   );
@@ -16,6 +25,12 @@ const HomeScreen = props => {
 const styles = StyleSheet.create({
   text: {
     fontSize: 30
+  },
+  button: {
+    backgroundColor: "#00a2ff",
+    padding: 5,
+    marginTop: 15,
+    width: 200
   }
 });
 
