@@ -6,11 +6,11 @@ const ColorCounter = ({ color, setColor, colorValue }) => {
     <View>
       <Text>{color}</Text>
       <Button
-        onPress={() => colorValue < 255 && setColor(c => c + 5)}
+        onPress={() => colorValue + 15 < 255 && setColor(c => c + 15)}
         title={`Increase ${color}`}
       />
       <Button
-        onPress={() => colorValue > 0 && setColor(c => c - 5)}
+        onPress={() => colorValue - 15 > 0 && setColor(c => c - 15)}
         title={`Decrease ${color}`}
       />
     </View>
