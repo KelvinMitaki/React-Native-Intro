@@ -48,6 +48,12 @@ const HomeScreen = ({ navigation }) => {
       >
         <Text>go to Text Screen</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate("Box")}
+      >
+        <Text>go to Box Screen</Text>
+      </TouchableOpacity>
     </View>
   );
 };
